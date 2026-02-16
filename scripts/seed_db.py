@@ -18,10 +18,13 @@ async def seed():
     maker = get_async_session_maker()
     async with maker() as session:
         plan = Plan(
-            request_payload={"objective": "seed"},
+            request_payload={"store_id": 1, "horizon_days": 7, "items": []},
             agent_outputs={},
-            final_decision={"approved": True},
-            status="seed",
+            final_decision={
+                "recommendations": [],
+                "metadata": {"model_version": None, "generated_at": "2024-01-01T00:00:00", "trace_id": "seed"},
+            },
+            status="created",
         )
         session.add(plan)
         await session.commit()
