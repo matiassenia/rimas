@@ -2,7 +2,7 @@
 
 import logging
 
-from src.rimas.agents.state import PlanState
+from rimas.agents.state import PlanState
 
 logger = logging.getLogger(__name__)
 

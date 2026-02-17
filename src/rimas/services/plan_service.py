@@ -6,8 +6,8 @@ from uuid import uuid4
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.rimas.api.schemas import PlanStatus
-from src.rimas.db.models import Plan, PlanEvent
+from rimas.api.schemas import PlanStatus
+from rimas.db.models import Plan, PlanEvent
 
 
 def _to_serializable(obj: dict) -> dict:

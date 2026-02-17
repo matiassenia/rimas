@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     database_url_async: str = "postgresql+asyncpg://rimas:rimas@localhost:5432/rimas"
     mlflow_tracking_uri: str = "http://localhost:5000"
     openai_api_key: str | None = None
+    orchestrator: str = "stub"  # stub | langgraph
 
     @property
     def has_llm(self) -> bool:

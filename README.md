@@ -196,6 +196,21 @@ All agent outputs are:
 
 This ensures full traceability of every decision.
 
+### Orchestrator Mode
+
+Set `ORCHESTRATOR` to switch between implementations:
+
+| Value | Description |
+|-------|-------------|
+| `stub` | Legacy graph + deterministic heuristics (default) |
+| `langgraph` | Real LangGraph workflow with structured nodes |
+
+Example (`.env` or Docker):
+
+```
+ORCHESTRATOR=langgraph
+```
+
 ## 🗄 Database Model
 
 ### plans

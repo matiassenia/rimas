@@ -2,8 +2,8 @@
 
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-from src.rimas.config import settings
-from src.rimas.db.models import Base
+from rimas.config import settings
+from rimas.db.models import Base
 
 _engine = None
 _session_maker = None

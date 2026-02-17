@@ -3,7 +3,7 @@
 import logging
 from typing import Any
 
-from src.rimas.config import settings
+from rimas.config import settings
 
 logger = logging.getLogger(__name__)
 

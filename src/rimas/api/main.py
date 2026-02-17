@@ -7,9 +7,9 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.rimas.logging import setup_logging
-from src.rimas.db.session import init_db
-from src.rimas.api.routes import health, predict, anomaly, plans
+from rimas.logging import setup_logging
+from rimas.db.session import init_db
+from rimas.api.routes import health, predict, anomaly, plans
 
 setup_logging()
 logger = logging.getLogger(__name__)

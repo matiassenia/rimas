@@ -2,11 +2,11 @@
 
 from langgraph.graph import StateGraph, END
 
-from src.rimas.agents.state import PlanState
-from src.rimas.agents.data_analyst import data_analyst_agent
-from src.rimas.agents.inventory import inventory_agent
-from src.rimas.agents.marketing import marketing_agent
-from src.rimas.agents.supervisor import supervisor_agent
+from rimas.agents.state import PlanState
+from rimas.agents.data_analyst import data_analyst_agent
+from rimas.agents.inventory import inventory_agent
+from rimas.agents.marketing import marketing_agent
+from rimas.agents.supervisor import supervisor_agent
 
 
 def build_plan_graph():

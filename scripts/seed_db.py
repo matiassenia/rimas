@@ -5,9 +5,9 @@ import logging
 import sys
 
 sys.path.insert(0, ".")
-from src.rimas.db.session import init_db, get_async_session_maker
-from src.rimas.db.models import Plan
-from src.rimas.logging import setup_logging
+from rimas.db.session import init_db, get_async_session_maker
+from rimas.db.models import Plan
+from rimas.logging import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)

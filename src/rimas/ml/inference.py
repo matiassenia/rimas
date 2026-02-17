@@ -3,7 +3,7 @@
 import logging
 from typing import Any
 
-from src.rimas.ml.mlflow_client import get_model
+from rimas.ml.mlflow_client import get_model
 
 logger = logging.getLogger(__name__)
 

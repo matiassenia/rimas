@@ -6,10 +6,10 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.rimas.api.deps import get_db
-from src.rimas.api.schemas import CreatePlanRequest, PlanMetadata, PlanResponse
-from src.rimas.services.orchestration import run_plan_workflow
-from src.rimas.services.plan_service import get_plan, approve_plan, reject_plan
+from rimas.api.deps import get_db
+from rimas.api.schemas import CreatePlanRequest, PlanMetadata, PlanResponse
+from rimas.services.orchestration import run_plan_workflow
+from rimas.services.plan_service import get_plan, approve_plan, reject_plan
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -27,7 +27,7 @@ def _plan_to_response(plan) -> PlanResponse:
         metadata=PlanMetadata(
             model_version=meta.get("model_version"),
             generated_at=meta.get("generated_at"),
-            trace_id=meta.get("trace_id", ""),
+            trace_id=meta.get("trace_id") or str(uuid.uuid4()),
         ),
     )
 

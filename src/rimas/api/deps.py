@@ -4,7 +4,7 @@ from collections.abc import AsyncGenerator
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.rimas.db.session import get_async_session_maker
+from rimas.db.session import get_async_session_maker
 
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:

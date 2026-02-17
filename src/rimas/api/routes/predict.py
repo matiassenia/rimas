@@ -5,7 +5,7 @@ import logging
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from src.rimas.ml.inference import predict_demand
+from rimas.ml.inference import predict_demand
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
